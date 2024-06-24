@@ -12,6 +12,9 @@ SET time_zone = "+00:00";
 -- Base de datos: `desis`
 --
 
+CREATE DATABASE IF NOT EXISTS `desis`
+use `desis`
+
 -- --------------------------------------------------------
 
 --
