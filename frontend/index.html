@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Diagnostico Desis</title>
+    </head>
+    <body class="p-6 flex select-none h-screen">
+        <form class="w-[40rem] m-auto" id="frmVoto">
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Nombre y Apellido</label>
+                <div class="w-[21rem] flex flex-wrap">
+                    <input type="text" id="txtName" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5"/>
+                    <label class="w-full text-red-400 hidden">No debe estar en blanco.</label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Alias</label>
+                <div class="w-[21rem] flex flex-wrap">
+                    <input type="text" id="txtAlias" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5"/>
+                    <label class="w-full text-red-400 hidden"></label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">RUT</label>
+                <div class="w-[21rem] flex flex-wrap">
+                    <input type="text" id="txtRut" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5"/>
+                    <label class="w-full text-red-400 hidden">Rut invalido.</label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Email</label>
+                <div class="w-[21rem] flex flex-wrap">
+                    <input type="email" id="txtEmail" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5"/>
+                    <label class="w-full text-red-400 hidden">Email invalido.</label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Región</label>
+                <div class="w-[21rem]">
+                    <select id="slRegion" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5">
+                        <option value="0">---</option>
+                    </select>
+                    <label class="w-full text-red-400 hidden">Debe escoger una región.</label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Comuna</label>
+                <div class="w-[21rem]">
+                    <select id="slComuna" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5 disabled:bg-gray-100" disabled>
+                        <option value="0">---</option>
+                    </select>
+                    <label class="w-full text-red-400 hidden">Debe escoger una comuna.</label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Candidato</label>
+                <div class="w-[21rem]">
+                    <select id="slCandidato" class="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm border p-1.5 disabled:bg-gray-100" disabled>
+                        <option value="0">---</option>
+                    </select>
+                    <label class="w-full text-red-400 hidden">Debe escoger un candidato.</label>
+                </div>
+            </div>
+            <div class="py-2 flex justify-between">
+                <label class="px-5">Como se enteró de Nostros</label>
+                <div>
+                    <div class="flex">
+                        <label class="flex mr-2">
+                            <input type="checkbox" name="cbxAbout" value="1" class="mx-1"/> 
+                            Web
+                        </label>
+                        <label class="flex mx-2">
+                            <input type="checkbox" name="cbxAbout" value="2" class="mx-1"/> 
+                            TV
+                        </label>
+                        <label class="flex  mx-2">
+                            <input type="checkbox" name="cbxAbout" value="3" class="mx-1"/> 
+                            Redes Sociales
+                        </label>
+                        <label class="flex  mx-2">
+                            <input type="checkbox" name="cbxAbout" value="4" class="mx-1"/> 
+                            Amigo
+                        </label>
+                    </div>
+                    <label class="text-red-400 hidden" id="lblCbxAbout">Debes selecionar minimos 2 opciones.</label>
+                </div>
+            </div>
+            <div class="py-5 flex w-[40rem] justify-center">
+                <button class="border-blue-500 mx-5 px-3 py-2 bg-blue-400 rounded text-white w-20" type="submit">Votar</button>
+            </div>
+        </form>
+    </body>
+    <script type="module" src="./src/js/main.js?v=0.3.4"></script>
+</html>
